@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../Images/background(1).jpg') no-repeat;
+    background: url('../Images/background-watermark\(2\).jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -28,6 +28,7 @@ header {
 }
 
 .logo {
+    font-family: "Cedarville Cursive", cursive;
     font-size: 2em;
     color: #fff;
     user-select: none;
@@ -94,11 +95,48 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box-register {
+    width: 100%;
+    padding: 40px;
 }
 
 .wrapper .form-box-login {
     width: 100%;
     padding: 40px;
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box-login {
+    position: absolute;
+    transition: none;
+    transition: transform 0.18s ease;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box-register {
+    position: absolute;
+    transition: transform 0.18s ease;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box-register {
+    position: absolute;
+    transition: none;
+    transform: translateX(0);
 }
 
 .wrapper .icon-close {
@@ -112,9 +150,16 @@ header {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    z-index: 1;
 }
 
 .form-box-login h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.form-box-register h2 {
     font-size: 2em;
     color: #162938;
     text-align: center;
@@ -224,76 +269,3 @@ header {
     text-decoration: underline;
 }
 
-/*FOOTER CONTENT*/
-footer {
-    background-color: #272631;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-text {
-    font-size: 15px;
-    padding: 0 20px 0 20px;
-}
-
-/* Style for social media icons */
-.fa {
-    padding: 10px;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-
-.social-icons {
-    display: flex;
-    padding-right: 20px;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Facebook icon */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-  border-radius: 50%;
-}
-
-/* instagram icon */
-.fa-instagram {
-  background: #c72867;
-  color: white;
-  border-radius: 50%;
-}
-
-/* whatsapp icon */
-.fa-whatsapp {
-  background: #12b037;
-  color: white;
-  border-radius: 50%;
-}
-
-/* twitter icon */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-  border-radius: 50%;
-}
-
-/* pinterest icon */
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-  border-radius: 50%;
-}
