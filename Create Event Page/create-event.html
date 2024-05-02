@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminisce | Create Event</title>
+
+    <link rel="stylesheet" href="../Create Event Page/create-event-style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="form-title">Create Event</h1>
+        <form action="#">
+          <div class="main-user-info">
+
+            <!-- CREATE EVENT DETAILS -->
+            <div class="user-input-box">
+              <label for="dateField">Date</label>
+              <input type="date"
+                      id="date"
+                      name="date"
+                      placeholder="Date" required/>
+            </div>
+
+            <div class="user-input-box">
+              <label for="venueField">Venue</label>
+              <input type="text"
+                      id="venue"
+                      name="venue"
+                      placeholder="Enter venue" required/>
+            </div>
+
+            <div class="user-input-box">
+              <label for="timeField">Time (hr/min)</label>
+              <input type="time"
+                      id="time"
+                      name="time"
+                      placeholder="Enter time" required/>
+            </div>         
+
+            <div class="user-input-box">
+              <label for="primary-color">Primary Theme Color</label>
+              <input type="color"
+                      id="color"
+                      name="color"
+                      placeholder="color 1" required/>
+            </div>
+
+            <div class="user-input-box">
+                <label for="seatingField">Seating</label>
+                <input type="text"
+                        id="seating"
+                        name="seating"
+                        placeholder="Number of tables" required/>
+            </div>
+
+            <div class="user-input-box">
+              <label for="color">Secondary Theme Color</label>
+              <input type="color"
+                      id="color"
+                      name="color"
+                      placeholder="color" required/>
+            </div>
+
+            <div class="user-input-box">
+                <input type="text"
+                        id="seating"
+                        name="seating"
+                        placeholder="Seats per table" required/>
+            </div>
+          </div>
+
+          <!-- MENU DETAILS -->
+          <div class="menu-box">
+            <h1 class="form-title">Menu</h1>
+            <div class="menu-input">
+               
+              <div class="menu-input-box">
+                <label for="starter">Starter</label>
+                <input type="text" name="starter" id="starter" placeholder="Starter name">
+              </div>
+
+              <div class="menu-input-box">
+                <label for="starter">Food Name</label>
+                <input type="text" name="food-item" id="food-item" placeholder="Item name">
+              </div>
+
+              <div class="menu-input-box">
+                <label for="starter">Ingredients</label>
+                <input type="text" name="ingredients" id="ingredients" placeholder="Ingredients">
+              </div>
+
+              <div class="menu-input-box">
+                <label for="diet">Select a Diet</label>
+                <select id="diet" name="diet">
+                  <option value="none">None</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="gluten-free">Gluten-Free</option>
+                  <option value="lactose-free">Lactose-Free</option>
+                </select>
+              </div>
+
+              <div class="menu-input-box">
+                <label for="menu-display">Displayed Menu</label>
+                <input type="text" name="menu-display" id="menu-display" placeholder="list of ingredients displayed (backend)" readonly>
+              </div>
+              
+              <div class="add-btn">
+                <input type="submit" value="Add">
+              </div>
+
+              <div class="add-btn">
+                <input type="submit" value="Upload Menu">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="menu-box">
+            <h1 class="form-title">Registry List</h1>
+            <div class="menu-input">
+               
+              <div class="menu-input-box">
+                <label for="item-name">Item</label>
+                <input type="text" name="item-name" id="item-name" placeholder="Item name">
+              </div>
+
+              <div class="menu-input-box">
+                <label for="starter">Link</label>
+                <input type="url" name="starter" id="starter" placeholder="Paste link to item">
+              </div>
+              
+            </div>
+
+            <div class="form-submit-btn">
+              <input type="submit" value="Add Item" id="btn-add-item">
+            </div>
+          </div>
+
+          <div class="form-submit-btn">
+            <input type="submit" value="Create Event">
+          </div>
+        </form>
+      </div>
+
+</body>
+</html>
