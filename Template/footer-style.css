@@ -1,6 +1,6 @@
 /*FOOTER CONTENT*/
 footer {
-    background-color: #272631;
+    background-color: #262221;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    opacity: 0.8;
+    
 }
 
 .footer-text {
