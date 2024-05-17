@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: linear-gradient(to bottom, #9CBBF2, #272631);
+}
+
+.container{
+    width: 100%;
+    max-width: 850px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* USER FORM */
+.form-title{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+}
+
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.user-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+/* MENU */
+.menu-input label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.menu-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.menu-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+#diet {
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+#menu-display {
+    height: 140px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.add-btn {
+    margin-left: 50px;
+}
+
+.add-btn input {
+    display: block;
+    width: 100%;
+    margin-top: 70px; /* Change so that it flexes when resized */
+    padding: 20px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #000;
+    background: rgb(141, 225, 240);
+}
+
+.add-btn input:hover {
+    background: rgb(58, 215, 243);
+    color: #000;
+    cursor: pointer;
+}
+
+.form-submit-btn input{
+    cursor: pointer;
+}
+
+.form-submit-btn {
+    margin-top: 20px;
+}
+
+.form-submit-btn input {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background: rgb(56, 148, 79);
+}
+
+.form-submit-btn input:hover {
+    background: rgb(55, 179, 86);
+    color: rgb(255, 255, 255);
+}
+
+#btn-add-item {
+    width: 30%;
+    margin: 0 auto;
+    color: #000;
+    background: rgb(141, 225, 240);
+}
+
+#btn-add-item:hover {
+    background: rgb(58, 215, 243);
+}
+
+@media(max-width: 600px) {
+    .container {
+        min-width: 280px;
+    }
+
+    .user-input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .user-input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+
+    .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-user-info{
+        max-height: 380px;
+        overflow: auto;
+    }
+
+    .main-user-info::-webkit-scrollbar{
+        width: 0;
+    }
+}
