@@ -14,7 +14,7 @@ body{
     background: linear-gradient(to bottom, #9CBBF2, #272631);
 }
 
-.container{
+.create-event-container{
     width: 100%;
     max-width: 850px;
     background: rgba(0, 0, 0, 0.7);
@@ -180,7 +180,7 @@ body{
 }
 
 @media(max-width: 600px) {
-    .container {
+    .create-event-container {
         min-width: 280px;
     }
 
