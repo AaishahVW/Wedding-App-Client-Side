@@ -2,31 +2,45 @@ function loadContent(section) {
     const content = document.getElementById('content');
     const buttons = document.querySelectorAll('.sidebar button');
 
+    // Hide all content sections
+    const contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach(section => section.style.display = 'none');
+
     // Remove the current highlighted button
     buttons.forEach(button => button.classList.remove('active'));
 
-    // set active and non-active for div content
+    // Hide the background image when any button is clicked
+    document.getElementById('manage-event-bg').style.display = 'none';
+    // Show the selected content section
     switch (section) {
         case 'create-event':
-            content.innerHTML = '<h2>Create Event</h2><p>Form to create an event will go here.</p>';
+            document.getElementById('create-event-content').style.display = 'block';
             break;
         case 'view-rsvp':
-            content.innerHTML = '<h2>View RSVP</h2><p>RSVP details will go here.</p>';
+            document.getElementById('view-rsvp-content').style.display = 'block';
             break;
         case 'edit-event':
-            renderEditEventForm(content);
+            document.getElementById('edit-event-content').style.display = 'block';
             break;
         case 'view-gallery':
-            content.innerHTML = '<h2>View Gallery</h2><p>Gallery content will go here.</p>';
+            document.getElementById('view-gallery-content').style.display = 'block';
             break;
         default:
-            content.innerHTML = 'Refreshed Content';
+            document.getElementById('manage-event-bg').style.display = 'block';
             break;
     }
 
-    // highlight button on click
-    const clickedButton = document.querySelector(`.sidebar button[data-section="${section}"]`);
-    if (clickedButton) {
-        clickedButton.classList.add('active');
-    }
+    // Highlight the clicked button
+    buttons.forEach(button => {
+        if (button.getAttribute('data-section') === section) {
+            button.classList.add('active');
+        }
+    });
 }
+
+// Initially show the background image and hide all content sections
+document.addEventListener('DOMContentLoaded', () => {
+    const contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach(section => section.style.display = 'none');
+    document.getElementById('manage-event-bg').style.display = 'block';
+});
