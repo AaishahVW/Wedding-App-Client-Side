@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../Images/background-watermark\(2\).jpg') no-repeat;
+    background: url('../Images/withoutwm.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -28,13 +28,16 @@ header {
 }
 
 .logo {
-    font-family: "Cedarville Cursive", cursive;
-    font-size: 2em;
-    color: #fff;
-    user-select: none;
+    font-family: "Style Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+     font-size: 40px;
+     color: #fff;
+     user-select: none;
 }
 
 .navbar a {
+    font-family: "Josefin Sans", sans-serif;
     position: relative;
     font-size: 1.1em;
     color: #fff;
@@ -44,6 +47,7 @@ header {
 }
 
 .navbar a::after {
+    
     content: '';
     position: absolute;
     left: 0;
@@ -63,6 +67,7 @@ header {
 
 /* Login pop up button in navbar*/
 .navbar .btnLogin-popup {
+    font-family: "Josefin Sans", sans-serif;
     width: 130px;
     height: 50px;
     background: transparent;
@@ -84,7 +89,8 @@ header {
 
 /* login container */
 .wrapper {
-    position: relative;
+    
+    position: absolute;
     width: 360px;
     height: 440px;
     background: transparent;
@@ -235,6 +241,7 @@ header {
 }
 
 .btnLogin {
+    
     width: 100%;
     height: 40px;
     background: #162938;
@@ -268,4 +275,47 @@ header {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
+section {
+    height: 100vh;
+    /*display: flex;*/
+  
+    /*align-items: center;*/
+    scroll-snap-align: start;
+  }
+  
+  .content {
+    background-size: cover;
+    background-position: center;
+  
+    align-items: center;
+    /* chad */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .content h1 {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 337;
+    font-style: normal;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+    font-size: 50px;
+    
+  
+  }
+  
+  .content p {
+    text-align: center;
+    color: rgb(61, 95, 141);
+    font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 337;
+    font-style: normal;
+    padding-bottom: 10%;
+
+  }
 

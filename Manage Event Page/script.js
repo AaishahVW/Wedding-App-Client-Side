@@ -9,8 +9,12 @@ function loadContent(section) {
     // Remove the current highlighted button
     buttons.forEach(button => button.classList.remove('active'));
 
-    // Hide the background image when any button is clicked
-    document.getElementById('manage-event-bg').style.display = 'none';
+    // Check if #manage-event-bg exists before hiding it
+    const backgroundImg = document.getElementById('manage-event-bg');
+    if (backgroundImg) {
+        backgroundImg.style.display = 'none';
+    }
+
     // Show the selected content section
     switch (section) {
         case 'create-event':
@@ -26,7 +30,10 @@ function loadContent(section) {
             document.getElementById('view-gallery-content').style.display = 'block';
             break;
         default:
-            document.getElementById('manage-event-bg').style.display = 'block';
+            // If section doesn't match any case, show the background image
+            if (backgroundImg) {
+                backgroundImg.style.display = 'block';
+            }
             break;
     }
 
@@ -37,10 +44,3 @@ function loadContent(section) {
         }
     });
 }
-
-// Initially show the background image and hide all content sections
-document.addEventListener('DOMContentLoaded', () => {
-    const contentSections = document.querySelectorAll('.content-section');
-    contentSections.forEach(section => section.style.display = 'none');
-    document.getElementById('manage-event-bg').style.display = 'block';
-});
